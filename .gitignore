@@ -1,0 +1,6 @@
+.venv
+ngram_builder.egg-info
+out
+.cache
+data
+__pycache__
