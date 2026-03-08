@@ -19,6 +19,9 @@ class AppConfig:
     tokenizer: str
     sudachi_split_mode: str
     ginza_model: str
+    ginza_batch_size: int
+    ginza_n_process: int
+    ginza_disable_ner: bool
     token_form: str
 
     text_unit: str
@@ -35,6 +38,7 @@ class AppConfig:
     blocked_pos: tuple[str, ...]
     min_token_length: int | None
     max_token_length: int | None
+    strip_chars: str
 
     output_format: str
     output: str
