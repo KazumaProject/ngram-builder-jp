@@ -18,6 +18,7 @@ class AppConfig:
 
     tokenizer: str
     sudachi_split_mode: str
+    ginza_model: str
     token_form: str
 
     text_unit: str

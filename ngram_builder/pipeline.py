@@ -15,12 +15,15 @@ from ngram_builder.models import Token
 from ngram_builder.ngram_counter import select_rows, update_counter
 from ngram_builder.sentence_splitter import split_text
 from ngram_builder.tokenizers.fugashi_tokenizer import FugashiTokenizer
+from ngram_builder.tokenizers.ginza_bunsetu_tokenizer import GinzaBunsetuTokenizer
 from ngram_builder.tokenizers.sudachi_tokenizer import SudachiTokenizer
 from ngram_builder.tokenizers.whitespace_tokenizer import WhitespaceTokenizer
 from ngram_builder.writers import write_rows
 
 
 def build_tokenizer(config: AppConfig):
+    if config.tokenizer == "ginza":
+        return GinzaBunsetuTokenizer(model_name=config.ginza_model)
     if config.tokenizer == "sudachi":
         return SudachiTokenizer(split_mode=config.sudachi_split_mode)
     if config.tokenizer == "fugashi":

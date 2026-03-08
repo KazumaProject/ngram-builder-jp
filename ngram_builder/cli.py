@@ -19,8 +19,9 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--save-local-dir", default=None)
     parser.add_argument("--force-redownload", action="store_true")
 
-    parser.add_argument("--tokenizer", choices=["sudachi", "fugashi", "whitespace"], default="sudachi")
+    parser.add_argument("--tokenizer", choices=["sudachi", "ginza", "fugashi", "whitespace"], default="ginza")
     parser.add_argument("--sudachi-split-mode", choices=["A", "B", "C"], default="C")
+    parser.add_argument("--ginza-model", default="ja_ginza")
     parser.add_argument("--token-form", choices=["surface", "lemma"], default="surface")
 
     parser.add_argument("--text-unit", choices=["document", "sentence"], default="sentence")
@@ -66,6 +67,7 @@ def parse_args() -> AppConfig:
         force_redownload=args.force_redownload,
         tokenizer=args.tokenizer,
         sudachi_split_mode=args.sudachi_split_mode,
+        ginza_model=args.ginza_model,
         token_form=args.token_form,
         text_unit=args.text_unit,
         min_n=args.min_n,

@@ -17,6 +17,7 @@ dependencies = [
 
 [project.optional-dependencies]
 fugashi = ["fugashi>=1.3.0", "unidic-lite>=1.0.8"]
+ginza = ["ginza>=5.2.0", "ja_ginza>=5.2.0"]
 
 [project.scripts]
 ngram-builder = "ngram_builder.cli:main"
