@@ -177,6 +177,8 @@ Later offline run:
 
 ```bash
 ngram-builder --mode local --local-path data/wiki_local_export --text-column text --tokenizer sudachi --token-form lemma --text-unit sentence --min-n 1 --max-n 3 --max-records 20000 --drop-symbols --split-by-n --max-ngrams 50000 --max-ngrams-scope per-n --output-format tsv --output out/wiki_offline.tsv
+
+ngram-builder --mode local --local-path data/wiki_local_export --text-column text --tokenizer sudachi --token-form lemma --text-unit sentence --min-n 1 --max-n 3 --max-records 20000 --drop-symbols --split-by-n --max-ngrams 50000 --max-ngrams-scope per-n --output-format tsv --output out/wiki_offline.tsv
 ```
 
 ## CLI options summary

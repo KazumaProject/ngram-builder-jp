@@ -4,3 +4,4 @@ out
 .cache
 data
 __pycache__
+.DS_Store
